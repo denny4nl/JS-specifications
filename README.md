@@ -4,6 +4,7 @@
 * 本文档主要目的用于规范在开发过程中对JS的使用 *
 * 针对以下几个方面进行强制规定或者建议：       *
 * ============================================ *
+
 Reference
  - [原文](https://github.com/airbnb/javascript)
  - [参考1](https://github.com/adamlu/javascript-style-guide)
@@ -25,7 +26,7 @@ Reference
 1. [构造器](#constructors)
 1. [事件](#events)
 1. [JQuery](#jquery)
-1. [ES6](#https://github.com/airbnb/javascript#ecmascript-6-styles)
+1. [ES6](https://github.com/airbnb/javascript#ecmascript-6-styles)
 
 ## <a name='rules'>命名规则</a>
     + 驼峰式大小写（camel case）
@@ -41,12 +42,12 @@ Reference
     + 匈牙利命名法
 
 ## <a name='file-naming'>文件命名</a>
-    如[命名规则](#file-naming)中提到的JQuery文件命名习惯，使用
+    - 如[命名规则](#file-naming)中提到的JQuery文件命名习惯，使用
     product-name.plugin-ver.filetype.js 这种方式。在项目中开发过程中由于文件
     变化频繁, 在发布成为正式可用版本前，ver处暂时不填写, 调试过程中暂时也不
     压缩js, 所以filetype暂时也为空。目前也暂时不会存在某个产品的plugin。
     直接使用product-name.js方式命名文件。
-    在我们现有的产品开发过程中，由于list和CRUD（增删改查）比较多，可以使用
+    - 在我们现有的产品开发过程中，由于list和CRUD（增删改查）比较多，可以使用
     以下方式：xxx-list.js, xxx-crud.js
 
 ## <a name='comments'>注释</a>
