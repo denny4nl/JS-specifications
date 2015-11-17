@@ -263,7 +263,7 @@ Reference
     // good
     someStack.push('abracadabra');
     ```
-  - 当你需要拷贝数组时使用slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+  - 当你需要拷贝数组时使用slice.
 
     ```javascript
     var len = items.length,
@@ -302,24 +302,9 @@ Reference
     // good
     var fullName = 'Bob ' + this.lastName;
     ```
- - 对字符串使用单引号 `''`
-
-    ```javascript
-    // bad
-    var name = "Bob Parr";
-
-    // good
-    var name = 'Bob Parr';
-
-    // bad
-    var fullName = "Bob " + this.lastName;
-
-    // good
-    var fullName = 'Bob ' + this.lastName;
-    ```
 
   - 超过80个字符的字符串应该使用字符串连接换行
-  - 注: 如果过度使用，长字符串连接可能会对性能有影响. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
+  - 注: 如果过度使用，长字符串连接可能会对性能有影响.
 
     ```javascript
     // bad
@@ -333,7 +318,6 @@ Reference
     with this, you would get nowhere \
     fast.';
 
-
     // good
     var errorMessage = 'This is a super long error that ' +
       'was thrown because of Batman.' +
@@ -342,7 +326,7 @@ Reference
       'with this, you would get nowhere ' +
       'fast.';
     ```
-    - 编程时使用join而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
+    - 编程时使用join而不是字符串连接来构建字符串，特别是IE
 
     ```javascript
     var items,
@@ -470,12 +454,6 @@ Reference
       return name;
     })();
 
-    // good
-    ;(function() {
-      var name = 'Skywalker';
-      return name;
-    })();
-
     // 如果是函数表达式，分号是不允许省略的。
     var funcName = function () {
     };
@@ -493,6 +471,42 @@ Reference
   - 在函数调用、函数声明、括号表达式、属性访问、if / for / while / switch 
     / catch 等语句中，() 和 [] 内紧贴括号部分不允许有空格。
   - 行尾不得有多余的空格。
+    ```javascript
+    //good
+    var a = !arr.length;
+    a++;
+    a = b + c;
+
+    // bad
+    dog.set('attr',{
+      age:'1 year',
+      breed:'Bernese Mountain Dog'
+    });
+
+    // good
+    dog.set('attr', {
+      age: '1 year',
+      breed: 'Bernese Mountain Dog'
+    });
+    ```
+  - 将tab设为4个空格
+
+    ```javascript
+    // bad
+    function() {
+    ∙∙var name;
+    }
+
+    // bad
+    function() {
+    ∙var name;
+    }
+
+    // good
+    function() {
+    ∙∙∙∙var name;
+    }
+    ```
 
 ## <a name='conditionals'>比较操作</a>
   在 Equality Expression 中使用类型严格的 ===。
